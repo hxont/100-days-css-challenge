@@ -1,0 +1,22 @@
+body {
+    background: #3faf82;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box div {
+    background-color: white;
+    height: 8px;
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
