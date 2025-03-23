@@ -1,0 +1,80 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: background-transition 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #89D7F9 65%, #EAD973 36%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@keyframes background-transition {
+    0% {
+        background-color: #ADD8E6; /* 아침 (밝은 하늘색) */
+    }
+    80% {
+        background-color: #001F3F; /* 밤 (짙은 남색) */
+    }
+}
+
+.triangle1 {
+    width: 0;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid white;
+    position: absolute;
+    bottom: 46.9%;
+    left: 44%;
+    z-index: 1;
+}
+
+.triangle2 {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 60px solid #d9d9d9;
+    position: absolute;
+    bottom: 46.9%;
+    left: 49%;
+}
+
+@keyframes sun-goes-down {
+    0% {
+        transform: translate(15px, -10px) rotate(20deg); /* 왼쪽 아래에서 시작 */
+    }
+    50% {
+        transform: translate(40px, -50px) rotate(-10deg); /* 중앙 위로 이동 */
+    }
+    70% {
+        transform: translate(80px, -80px) rotate(120deg); /* 중앙에서 오른쪽 위로 이동 */
+    }
+    100% {
+        transform: translate(160px, -15px) rotate(28deg); /* 중앙에서 오른쪽 위로 이동 */
+    }
+}
+
+.sun {
+    width: 35px;
+    height: 35px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 46.9%;
+    left: 40%;
+    z-index: 0;
+    transform-origin: center center; /* 회전의 중심을 요소의 중앙으로 설정 */
+    animation: sun-goes-down 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+
+
+
